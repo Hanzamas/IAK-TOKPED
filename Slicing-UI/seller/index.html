@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tokopedia Seller Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>
+        <img src="1.jpg" alt="Tokopedia Logo" width="150" />
+      </h1>
+    </header>
+    <main>
+      <nav id="main-nav">
+        <a href="#" data-section="informasi-toko">Informasi Toko</a>
+        <a href="#" data-section="informasi-produk">Informasi Produk</a>
+      </nav>
+
+      <!-- Informasi Toko Section -->
+      <section id="informasi-toko" class="form-container">
+        <div class="form-section">
+          <h2>Isi Informasi Toko Mu</h2>
+          <form id="store-info-form">
+            <div>
+              <label for="nama-toko">Nama Toko</label>
+              <input type="text" id="nama-toko" placeholder="Input text" />
+            </div>
+            <div>
+              <label for="deskripsi-toko">Deskripsi Toko</label>
+              <textarea id="deskripsi-toko" placeholder="Input text"></textarea>
+            </div>
+            <div>
+              <label for="kategori-produk">Kategori Produk</label>
+              <select id="kategori-produk">
+                <option value="" disabled selected>Pilih kategori</option>
+                <option value="fashion">Fashion</option>
+                <option value="elektronik">Elektronik</option>
+                <option value="rumah-tangga">Rumah Tangga</option>
+              </select>
+            </div>
+            <div>
+              <label for="alamat-toko">Alamat Toko</label>
+              <textarea id="alamat-toko" placeholder="Input text"></textarea>
+            </div>
+            <div>
+              <label>Pilih Ekspedisi</label>
+              <div>
+                <input type="checkbox" id="ekspedisi1" /> List Item 1<br />
+                <input type="checkbox" id="ekspedisi2" /> List Item 2<br />
+                <input type="checkbox" id="ekspedisi3" /> List Item 3<br />
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="form-section">
+          <h2>Dokumen Verifikasi</h2>
+          <form id="upload-form">
+            <label for="upload-files"
+              >Masukkan Dokumen Verifikasi (KTP & NPWP)</label
+            >
+            <div class="upload-box">
+              <input type="file" id="upload-files" accept=".png, .jpg" />
+              <p>Drop files here or <a href="#">Browse files</a></p>
+            </div>
+          </form>
+        </div>
+        <div class="form-section">
+          <h2>Rekening Bank</h2>
+          <form id="bank-info-form">
+            <div>
+              <label for="nama-bank">Nama Bank</label>
+              <input type="text" id="nama-bank" placeholder="Input text" />
+            </div>
+            <div>
+              <label for="no-rekening">No Rekening</label>
+              <input type="text" id="no-rekening" placeholder="Input text" />
+            </div>
+            <div>
+              <label for="nama-pemilik-rekening">Nama Pemilik Rekening</label>
+              <input
+                type="text"
+                id="nama-pemilik-rekening"
+                placeholder="Input text"
+              />
+            </div>
+            <button type="submit" id="kirim-btn">Kirim</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- Informasi Produk Section -->
+      <section id="informasi-produk" class="product-container hidden">
+        <h2>Informasi Produk</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Image</th>
+              <th>Name</th>
+              <th>Description</th>
+              <th>Price</th>
+              <th>Edit</th>
+            </tr>
+          </thead>
+          <tbody id="product-list">
+            <!-- Data produk akan di-generate di sini -->
+          </tbody>
+        </table>
+        <button id="add-product-btn">Tambah Produk</button>
+      </section>
+
+      <!-- Modal Form untuk Tambah/Edit Produk -->
+      <div class="modal" id="product-modal">
+        <div class="modal-content">
+          <h2 id="modal-title">Tambah Produk</h2>
+          <form id="product-form">
+            <label for="product-image">Choose Image</label>
+            <input type="file" id="product-image" accept="image/*" />
+            <label for="product-name">Product Name</label>
+            <input type="text" id="product-name" required />
+            <label for="product-description">Description</label>
+            <textarea id="product-description" required></textarea>
+            <label for="product-price">Price</label>
+            <input type="number" id="product-price" required />
+            <button type="submit">Save</button>
+          </form>
+          <button id="close-modal">Close</button>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
