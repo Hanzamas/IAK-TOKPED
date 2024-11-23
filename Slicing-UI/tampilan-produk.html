@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tampilan Detail Produk</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="style/style-tampilan-produk.css" />
+    <style></style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-light bg-white p-3">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img src="assets/img/tokopedia-seeklogo.png" alt="Tokopedia Logo" />
+          <span class="ms-2 text-success fw-bold fs-4">Tokopedia</span>
+        </a>
+        <form class="d-flex flex-grow-1 mx-3">
+          <div class="input-group">
+            <span class="input-group-text bg-white border-end-0">
+              <i class="bi bi-search text-muted"></i>
+            </span>
+            <input class="form-control border-start-0 search-input" type="search" placeholder="Search" aria-label="Search" />
+          </div>
+        </form>
+        <!-- Buttons (Desktop View) -->
+        <div class="d-none d-lg-flex">
+          <a href="/register" class="btn btn-outline-success me-2">Daftar</a>
+          <a href="/login" class="btn btn-success text-white">Masuk</a>
+        </div>
+        <!-- Hamburger Menu (Mobile View) -->
+        <button class="navbar-toggler d-lg-none text-success border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarButtons" aria-controls="navbarButtons" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-three-dots fs-4"></i>
+        </button>
+        <!-- Hidden Buttons (Mobile View) -->
+        <div class="collapse navbar-collapse" id="navbarButtons">
+          <div class="d-flex justify-content-end flex-wrap">
+            <a href="/register" class="btn btn-outline-success me-2 mb-2">Daftar</a>
+            <a href="/login" class="btn btn-success text-white mb-2">Masuk</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-5">
+      <div class="row g-4">
+        <!-- Gambar Produk -->
+        <div class="col-lg-6 col-md-12">
+          <div class="product-image">
+            <div class="image-wrapper">
+              <img id="main-image" src="assets/img/card/samsung-s24.jpg" alt="Gambar Produk" class="main-image" />
+            </div>
+            <div class="thumbnail-container">
+              <div class="thumbnail" style="background-image: url('assets/img/card/samsung-s24.jpg')" onclick="changeMainImage('assets/img/card/samsung-s24.jpg')"></div>
+              <div class="thumbnail" style="background-image: url('assets/img/card/samsung1.jpg')" onclick="changeMainImage('assets/img/card/samsung1.jpg')"></div>
+              <div class="thumbnail" style="background-image: url('assets/img/card/samsung2.jpg')" onclick="changeMainImage('assets/img/card/samsung2.jpg')"></div>
+              <div class="thumbnail" style="background-image: url('assets/img/card/samsung3.jpg')" onclick="changeMainImage('assets/img/card/samsung3.jpg')"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Detail Produk -->
+        <div class="col-lg-6 col-md-12">
+          <div class="mb-4">
+            <h3 style="font-weight: bold">Samsung Galaxy S24</h3>
+            <p>Terjual 1rb+ <span class="text-warning">★</span> 4.9 (997 rating)</p>
+            <h4 class="text-success mb-4">Harga Produk: <strong>Rp 15.254.000</strong></h4>
+          </div>
+          <h4 class="text-beli-lokal mb-3 mt-4">Beli Lokal</h4>
+
+          <div class="border border-success rounded p-3">
+            <h5>Atur Jumlah dan Catatan</h5>
+            <div class="d-flex align-items-center mb-3">
+              <div class="thumbnail me-3" style="background-image: url(assets/img/card/samsung-s24.jpg)"></div>
+              <div>
+                <h4 style="font-weight: bold; font-size: 1rem">Nama Produk</h4>
+              </div>
+            </div>
+            <div>
+              <hr style="border: 1, 5px solid #ddd; margin-top: 18px; margin-bottom: 28px" />
+            </div>
+
+            <div class="d-flex align-items-center mb-3">
+              <label for="quantity" class="me-2">Jumlah Produk:</label>
+              <button class="btn btn-outline-secondary btn-sm me-2" onclick="decreaseQuantity()">-</button>
+              <input type="number" id="quantity" name="quantity" value="1" min="1" max="63" class="form-control text-center" placeholder="Masukkan jumlah" title="Jumlah produk yang ingin dibeli" style="width: 70px" />
+              <button class="btn btn-outline-secondary btn-sm ms-2" onclick="increaseQuantity()">+</button>
+              <!-- Informasi Stok -->
+              <span class="ms-3 text-muted">Stok: 137</span>
+            </div>
+
+            <p>Max. pembelian 63 pcs</p>
+            <h5 class="text-end">Subtotal: <strong>Rp 15.254.000</strong></h5>
+
+            <button class="btn btn-success btn-custom mt-3 w-100">Beli</button>
+            <button class="btn btn-outline-secondary btn-custom mt-2 w-100">+ Keranjang</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- bagian kedua -->
+    <div class="container mt-4">
+      <div class="main-container">
+        <!-- Informasi Toko -->
+        <div class="card-container">
+          <div class="store-info">
+            <div class="avatar">
+              <img src="assets/img/action-figure.png" alt="Foto Profil" />
+            </div>
+            <div class="store-details">
+              <h5>Samsung Official Store</h5>
+              <small>Terakhir Online: 10 Tahun lalu</small>
+              <div class="rating">
+                <i class="bi bi-star-fill text-warning"></i>
+                <span>4.9 (597 rating)</span>
+              </div>
+              <div class="processing-time">
+                <i class="bi bi-clock"></i>
+                <span>± 3 jam pesanan diproses</span>
+              </div>
+            </div>
+          </div>
+          <button class="btn-follow">Ikuti</button>
+        </div>
+
+        <!-- Informasi Pengiriman -->
+        <div class="card-container">
+          <div class="shipping-info">
+            <h6>Pengiriman</h6>
+            <p><i class="bi bi-geo-alt-fill"></i> Dikirim dari Kota Jakarta</p>
+            <p><i class="bi bi-truck"></i> Ongkir Reguler 12 rb - 13 rb</p>
+            <p><i class="bi bi-calendar-event"></i> Estimasi tiba besok - 14 Nov</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tambahan Elemen Baru -->
+
+      <div class="tabs-container">
+        <div role="tablist" class="nav nav-tabs">
+          <button role="tab" tabindex="0" class="nav-link active" id="detail-tab" data-bs-toggle="tab" href="#detail" aria-controls="detail" aria-selected="true">Detail</button>
+          <button role="tab" tabindex="-1" class="nav-link" id="spesifikasi-tab" data-bs-toggle="tab" href="#spesifikasi" aria-controls="spesifikasi" aria-selected="false">Spesifikasi</button>
+          <button role="tab" tabindex="-1" class="nav-link" id="informasi-tab" data-bs-toggle="tab" href="#informasi" aria-controls="informasi" aria-selected="false">Informasi Penting</button>
+        </div>
+
+        <div class="tab-content">
+          <div id="detail" class="tab-pane fade show active" role="tabpanel" aria-labelledby="detail-tab">
+            <p>
+              Kondisi: Baru<br />
+              Min. Pemesanan: 1 Buah<br />
+              Etalase: Mobiles
+            </p>
+          </div>
+          <div id="spesifikasi" class="tab-pane fade" role="tabpanel" aria-labelledby="spesifikasi-tab">
+            <p>
+              Nama Produk<br />
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br /><br />
+              <strong>Info Produk</strong><br />
+              - Cara Klaim : Hubungi Merek<br />
+              - Kapasitas RAM : 8 GB<br />
+              - Merek : Samsung<br /><br />
+              <strong>Bawahan:</strong><br />
+              - Longditudo: 90 cm<br />
+              - Latitudo: 55 cm<br /><br />
+              Pondus: 270 gram<br />
+              Textura: Parasit premium<br /><br />
+              <strong>Crumena:</strong><br />
+              - Magnitudo: 15x19 cm<br /><br />
+              Motivae: set atasan + bawahan + crumena
+            </p>
+          </div>
+          <div id="informasi" class="tab-pane fade" role="tabpanel" aria-labelledby="informasi-tab">
+            <p>
+              Informasi penting terkait produk ini akan dimuat di sini. <br />
+              <strong>Jam Operasional</strong><br />
+              Waktu Operasional: Senin Jumat : 09.00 18.00 Sabtu & Minggu : Libur (Operasional dan Pengiriman) Hari Libur Nasional : Libur (diproses keesokan harinya) - Pesanan yang masuk akan diproses dan dikirimkan berdasarkan urutan
+              pesanan yang masuk.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ulasan produk -->
+    <div class="container review-container">
+      <h3 class="review-title">Ulasan Produk</h3>
+
+      <!-- Carousel -->
+      <div id="reviewCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="col-lg-6 col-md-6">
+                <div class="review-card">
+                  <p>Ulasan Produk 1</p>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6">
+                <div class="review-card">
+                  <p>Ulasan Produk 2</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-lg-6 col-md-6">
+                <div class="review-card">
+                  <p>Ulasan Produk 3</p>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6">
+                <div class="review-card">
+                  <p>Ulasan Produk 4</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#reviewCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#reviewCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white py-4">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Logo dan Info -->
+          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+            <h2 class="text-success fw-bold">Tokopedia</h2>
+            <img src="assets/img/tokopedia-seeklogo.png" alt="Tokopedia Logo" class="img-fluid" style="max-height: 150px" />
+          </div>
+          <!-- App Links dan Info -->
+          <div class="col-md-6 text-center text-md-end">
+            <img src="assets/img/tokopedia karakter2.png" alt="Characters" class="img-fluid mb-3" style="max-height: 150px" />
+            <div class="d-flex justify-content-center justify-content-md-end mb-2">
+              <a href="#" class="me-2">
+                <img src="assets/img/google play.png" alt="Google Play" class="app-logo" />
+              </a>
+              <a href="#" class="me-2">
+                <img src="assets/img/app store.png" alt="App Store" class="app-logo" />
+              </a>
+              <a href="#">
+                <img src="assets/img/app gallery.png" alt="App Gallery" class="app-logo" />
+              </a>
+            </div>
+
+            <p class="text-muted mb-1">© 2009 - 2024, PT. Tokopedia.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/js-tampilan-produk.js"></script>
+  </body>
+</html>

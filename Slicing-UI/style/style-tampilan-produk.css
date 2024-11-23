@@ -1,0 +1,337 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* navbar style */
+.navbar-brand img {
+  height: 40px;
+}
+
+.navbar .btn {
+  border-radius: 50px;
+  padding: 5px 20px;
+}
+
+/* search*/
+/* Efek stroke hijau */
+.search-input:focus {
+  outline: none; /* Menghilangkan outline bawaan */
+  border-color: #28a745; /* Warna hijau untuk border */
+  box-shadow: 0 0 5px rgba(40, 167, 69, 0.5); /* Efek glowing hijau */
+}
+
+.app-logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain; /* Menjaga proporsi gambar */
+  border-radius: 8px;
+}
+/* ----------------------------------------------- */
+
+/* Gambar & aksi produk */
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 100%; /* Rasio aspek 1:1 */
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+.main-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.thumbnail-container {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  overflow-x: auto;
+  padding-top: 10px;
+}
+.thumbnail {
+  flex-shrink: 0;
+  width: 70px;
+  height: 70px;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+.thumbnail:hover {
+  border-color: #198754;
+}
+.text-beli-lokal {
+  background-color: #2fa946;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: left;
+}
+.btn-custom {
+  padding: 8px 16px;
+  font-size: 1.25rem;
+}
+.btn-outline-secondary {
+  border-color: #2fa946; /* Warna hijauborder */
+  color: #2fa946; /* Warna teks hijau */
+}
+.btn-outline-secondary:hover {
+  background-color: #2fa946; /* Warna hijau saat hover */
+  color: #fff; /* Warna teks putih saat hover */
+}
+
+/* Warna hijau penuh saat tombol ditekan */
+.btn-outline-secondary:active {
+  background-color: #198754; /* Hijau gelap */
+  border-color: #198754;
+  color: #fff;
+}
+
+.btn-success {
+  background-color: #2fa946;
+  border-color: #2fa946;
+}
+
+.btn-success:hover {
+  background-color: #198754; /* Warna hijau gelap hover */
+  border-color: #198754;
+}
+
+.btn-success:active {
+  background-color: #136f41; /* Warna hijau lebih gelap untuk state aktif */
+  border-color: #136f41;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* style bagian 2 */
+.card-container {
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #eaeaea;
+  position: relative; /* Untuk tombol di dalam box */
+}
+
+.card-container {
+  min-height: 150px; /* Menjamin tinggi minimum sama */
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden; /* Agar gambar tetap dalam lingkaran */
+  margin-right: 15px;
+  flex-shrink: 0; /* Menjaga ukuran avatar tidak berubah */
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%; /* Membuat gambar berbentuk bulat */
+  object-fit: cover; /* Memastikan gambar proporsional */
+}
+
+.store-info {
+  display: flex;
+  align-items: flex-start; /* Menyelaraskan avatar dengan teks Nama Toko */
+  gap: 15px; /* Memberikan jarak antara avatar dan teks */
+}
+
+.store-details {
+  font-size: 0.9rem;
+}
+
+.store-details h5 {
+  margin: 0;
+  font-weight: bold;
+}
+
+.store-details small {
+  display: block;
+  margin-bottom: 5px;
+  color: #6c757d;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  gap: 5px; /* Spasi antara ikon dan teks */
+}
+
+.processing-time {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #6c757d;
+  gap: 5px; /* Spasi antara ikon dan teks */
+}
+
+.btn-follow {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px; /* Memperlebar tombol */
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-radius: 5px;
+  position: absolute; /* Posisi tetap di kanan atas */
+  top: 20px;
+  right: 20px;
+}
+
+.shipping-info {
+  font-size: 0.9rem;
+  flex: 1.5;
+}
+
+.shipping-info p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Spasi antara ikon dan teks */
+}
+
+.shipping-info p:last-child {
+  margin-top: 5px;
+}
+
+.shipping-info h6 {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.icon {
+  margin-right: 5px;
+}
+
+.main-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 20px;
+}
+
+.main-container > div {
+  flex: 1;
+}
+
+.main-container > div:first-child {
+  flex: 1.5;
+}
+
+/* Tambahan untuk Tabs */
+.nav-tabs {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.tab-content {
+  border: 2px solid #4caf50; /* Border hijau */
+  border-radius: 10px;
+  padding: 15px;
+}
+.tabs-container {
+  width: 58%;
+  margin-left: 0;
+  margin-right: auto;
+}
+
+/* Styling untuk tombol tab */
+.nav-tabs {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 0;
+}
+
+.nav-tabs .nav-link {
+  flex: 1;
+  text-align: center;
+  border: 2px solid #4caf50;
+  color: white;
+  background-color: #4caf50;
+  font-weight: bold;
+  border-radius: 0;
+  padding: 10px 0;
+  margin: 0;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.nav-tabs .nav-link:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.nav-tabs .nav-link:last-child {
+  border-top-right-radius: 10px; 
+  border-bottom-right-radius: 10px;
+}
+
+.nav-tabs .nav-link.active {
+  background-color: white; /* Warna latar putih untuk tombol aktif */
+  color: #4caf50; /* Warna teks hijau */
+  border-color: #4caf50; /* Border hijau */
+}
+
+.tab-content {
+  border: 2px solid #4caf50; /* Border hijau */
+  border-radius: 10px; /* Sudut melengkung */
+  padding: 15px; /* Padding dalam */
+  margin-top: 10px; /* Jarak atas */
+}
+
+/* style ulasan produk */
+.review-container {
+  padding: 30px 15px;
+}
+.review-title {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+.review-card {
+  background-color: #e9ecef; /* Warna latar abu-abu */
+  height: 200px; 
+  border-radius: 10px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  width: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #000;
+  z-index: 10; 
+  position: absolute;
+}
+.carousel-control-prev {
+  left: 10px; 
+}
+.carousel-control-next {
+  right: 10px; 
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5); /* transparan */
+  border-radius: 50%; /* ikon bulat */
+}
