@@ -1,0 +1,126 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling */
+header h1 {
+    font-size: 36px; /* Ukuran teks judul */
+    font-weight: 700;
+}
+
+/* Main Content Layout */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px; /* Jarak antar kolom */
+    padding: 0 15px;
+    max-width: 1200px; /* Batas lebar maksimum */
+    margin: auto; /* Tengahkan konten utama */
+    flex-wrap: wrap; /* Membuat konten fleksibel pada layar kecil */
+    min-height: 80vh; /* Ketinggian minimum */
+}
+
+/* Left Content Styling */
+.left-content {
+    flex: 1; /* Proporsi kolom kiri */
+    text-align: center;
+    max-width: 500px; /* Batas lebar maksimum */
+}
+
+.left-content img {
+    max-width: 100%; /* Gambar responsif */
+    height: auto;
+}
+
+.left-content h3 {
+    font-size: 24px; /* Ukuran heading kiri */
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.left-content p {
+    font-size: 16px; /* Ukuran teks deskripsi */
+    color: #666;
+}
+
+/* Form Box Styling */
+.form-box {
+    flex: 1; /* Proporsi kolom kanan */
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-box h2 {
+    font-size: 28px; /* Ukuran heading form */
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.form-box p {
+    font-size: 14px; /* Ukuran teks kecil */
+    color: #666;
+}
+
+.form-box a {
+    text-decoration: none;
+    color: #198754;
+    font-weight: 500;
+}
+
+.form-box a:hover {
+    text-decoration: underline;
+}
+
+/* Button Google */
+button img {
+    width: 20px;
+    height: 20px;
+}
+
+button {
+    font-size: 16px; /* Ukuran teks tombol */
+    font-weight: 500;
+}
+
+/* Input Field Styling */
+input {
+    font-size: 14px;
+    color: #333;
+}
+
+input:focus {
+    border-color: #198754;
+    box-shadow: 0 0 5px rgba(25, 135, 84, 0.5);
+}
+
+/* Responsive Styling */
+@media (max-width: 992px) {
+    .main-content {
+        flex-direction: column; /* Susun vertikal pada layar sedang */
+        align-items: center;
+    }
+
+    .left-content {
+        max-width: 100%; /* Lebar penuh */
+    }
+
+    .form-box {
+        max-width: 100%; /* Lebar penuh */
+    }
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        padding: 0 10px; /* Kurangi padding untuk layar kecil */
+    }
+
+    .left-content img {
+        max-width: 80%; /* Gambar lebih kecil */
+    }
+}
