@@ -1,0 +1,231 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f9fc;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+}
+
+/* Background Section */
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.background-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    width: auto; /* Ukuran default sesuai gambar asli */
+    height: auto; /* Tidak menyesuaikan layar besar */
+    max-width: none;
+    max-height: none;
+}
+
+/* Responsive Background */
+@media screen and (max-width: 768px) {
+    .background-image {
+        width: 100%; /* Menyesuaikan lebar layar kecil */
+        height: auto; /* Tetap menjaga aspek rasio */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .background-image {
+        width: auto;
+        height: 100%; /* Lebih fokus pada tinggi layar untuk perangkat sangat kecil */
+    }
+}
+
+/* Container Styling */
+.container {
+    text-align: center;
+    width: 90%; /* Gunakan persentase agar lebih responsif */
+    max-width: 600px; /* Batasi lebar maksimum form */
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+/* Header Styling */
+.header {
+    margin-bottom: 30px;
+}
+
+.logo {
+    width: 100%; /* Sesuaikan lebar logo */
+    max-width: 400px; /* Batasi ukuran maksimum logo */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 24px; /* Sesuaikan ukuran teks */
+    color: #008c45;
+    margin-bottom: 10px;
+}
+
+/* Subtitle */
+.subtitle {
+    font-size: 14px; /* Sesuaikan ukuran teks */
+    margin-bottom: 20px;
+}
+
+.subtitle a {
+    color: #008c45;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Google Button Styling */
+.google-btn {
+    display: block;
+    width: 100%;
+    background: #4285f4;
+    color: #fff;
+    border: none;
+    padding: 12px; /* Sesuaikan padding untuk layar kecil */
+    border-radius: 5px;
+    font-size: 16px; /* Sesuaikan ukuran font */
+    cursor: pointer;
+    margin-bottom: 25px;
+}
+
+.google-btn:hover {
+    background: #3367d6;
+}
+
+/* Divider Styling */
+.divider {
+    border: none;
+    height: 1px;
+    background: #ddd;
+    margin: 20px 0;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif; /* Mengubah jenis font untuk seluruh form */
+}
+
+/* Label Styling */
+label {
+    text-align: left;
+    font-size: 14px;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif; /* Tambahkan font */
+}
+
+/* Input Fields Styling */
+input {
+    border: 1px solid #ccc;
+    padding: 12px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif; /* Tambahkan font */
+}
+
+/* Login Button Styling */
+.login-btn {
+    text-decoration: none; /* Menghapus underline */
+
+    background: #008c45;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif; /* Tambahkan font */
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background: #008c90;
+
+}
+
+/* Google Button Styling */
+.google-btn {
+    display: block;
+    width: 100%;
+    background: #4285f4;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif; /* Tambahkan font */
+    cursor: pointer;
+    margin-bottom: 25px;
+}
+
+
+/* Terms & Conditions Text */
+.terms {
+    font-size: 12px; /* Sesuaikan ukuran teks */
+    color: #666;
+    margin-top: 15px;
+}
+
+.terms a {
+    color: #008c45;
+    text-decoration: none;
+}
+
+/* Responsive Form & Content */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .subtitle {
+        font-size: 12px;
+    }
+
+    .google-btn,
+    .login-btn {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    input {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .terms {
+        font-size: 10px;
+    }
+
+    .logo {
+        max-width: 300px;
+    }
+}
