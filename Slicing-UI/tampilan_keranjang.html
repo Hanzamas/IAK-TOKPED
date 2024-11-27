@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+     <!-- SweetAlert CSS -->
+     <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+
+    <!-- bootstrap 3 and affix -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- end  -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Tokopedia</title>
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="item-header-2 d-flex flex-column">
+        <div class="d-flex justify-content-between align-items-center">
+          <img class="img-tokopedia" src="assets/img/2.png" alt="" />
+
+          <div class="wrap-search">
+            <input type="text" class="form-control" placeholder="Cari barang" />
+            <div class="wrap-icon-search">
+              <img class="img-search" src="assets/img/3.png" alt="" />
+            </div>
+          </div>
+
+          <div class="wrap-img-shop mx-3">
+            <img class="img-shop" src="assets/img/4.png" alt="" />
+          </div>
+
+          <span class="mr-3 line">|</span>
+
+          <div class="d-flex">
+            <button class="btn font-weight-bold mr-3">Masuk</button>
+            <button class="btn font-weight-bold text-white">Daftar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="keranjang">
+        <h2>Keranjang</h2>
+        <div class="row mt-5">
+            <div class="card-pilih-semua">
+                <div class="summary-item">
+                  <!-- Checkbox dan tulisan Pilih semua -->
+                  <div class="left-content">
+                    <input type="checkbox" class="checkbox" />
+                    <p class="pilih-semua-text">Pilih semua</p>
+                  </div>
+                  <!-- Tombol Hapus -->
+                  <button class="btn btn-delete" >Hapus</button>
+                </div>
+              </div>              
+            <!-- CART n -->
+            <div class="col-0 mx-auto full-width-item">
+                <div class="card-trend position-relative">
+                    <div class="position-absolute" style="top: 28px; right: 42px;">
+                        <button class="btn-icon-only" id="deleteIcon">
+                            <img src="assets/img/sampah.png" alt="Icon Sampah" class="icon-img" />
+                        </button>                                                
+                    </div>
+                    <div class="position-absolute" style="top: 84px; right: 42px;">
+                        <p style="font-weight: 700; font-size: 18px;">Rp. 80.000</p>
+                    </div>
+                    <div class="wrap-img-trend h-100">
+                        <div class="d-flex align-items-center mb-3">
+                            <input type="checkbox" class="mr-2" />
+                            <p class="mb-0" style="font-size: 14px; font-weight: 700;">Kurnia ACC Official</p>
+                        </div>
+                        <img class="h-100" src="assets/img/13.png" alt="" width="100"/>
+                    </div>
+                    <div class="ml-4 d-flex flex-column position-absolute" style="left: 140px;">
+                        <span class="mb-1 font-weight-bold">Redmi Note 10</span>
+                        <div class="d-flex align-items-center mt-3">
+                            <button class="btn btn-sm" style="background-color: #03ac0e; width: 30px; color: #fff;">-</button>
+                            <input type="text" id="quantity" class="mx-2 text-center" value="1" style="width: 50px;" readonly />
+                            <button class="btn btn-sm" style="background-color: #03ac0e; width:30px; color: #fff;">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- CART n -->
+            <div class="col-0 mx-auto full-width-item">
+                <div class="card-trend position-relative">
+                    <div class="position-absolute" style="top: 28px; right: 42px;">
+                        <button class="btn-icon-only" id="deleteIcon">
+                            <img src="assets/img/sampah.png" alt="Icon Sampah" class="icon-img" />
+                        </button> 
+                    </div>
+                    <div class="position-absolute" style="top: 84px; right: 42px;">
+                        <p style="font-weight: 700; font-size: 18px;">Rp. 80.000</p>
+                    </div>
+                    <div class="wrap-img-trend h-100">
+                        <div class="d-flex align-items-center mb-3">
+                            <input type="checkbox" class="mr-2" />
+                            <p class="mb-0" style="font-size: 14px; font-weight: 700;">Kurnia ACC Official</p>
+                        </div>
+                        <img class="h-100" src="assets/img/13.png" alt="" width="100"/>
+                    </div>
+                    <div class="ml-4 d-flex flex-column position-absolute" style="left: 140px;">
+                        <span class="mb-1 font-weight-bold">Redmi Note 10</span>
+                        <div class="d-flex align-items-center mt-3">
+                            <button class="btn btn-sm" style="background-color: #03ac0e; width: 30px; color: #fff;">-</button>
+                            <input type="text" id="quantity" class="mx-2 text-center" value="1" style="width: 50px;" readonly />
+                            <button class="btn btn-sm" style="background-color: #03ac0e; width:30px; color: #fff;">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- CART n -->
+            <div class="col-0 mx-auto full-width-item">
+                <div class="card-trend position-relative">
+                    <div class="position-absolute" style="top: 28px; right: 42px;">
+                        <button class="btn-icon-only" id="deleteIcon">
+                            <img src="assets/img/sampah.png" alt="Icon Sampah" class="icon-img" />
+                        </button> 
+                    </div>
+                    <div class="position-absolute" style="top: 84px; right: 42px;">
+                        <p style="font-weight: 700; font-size: 18px;">Rp. 80.000</p>
+                    </div>
+                    <div class="wrap-img-trend h-100">
+                        <div class="d-flex align-items-center mb-3">
+                            <input type="checkbox" class="mr-2" />
+                            <p class="mb-0" style="font-size: 14px; font-weight: 700;">Kurnia ACC Official</p>
+                        </div>
+                        <img class="h-100" src="assets/img/13.png" alt="" width="100"/>
+                    </div>
+                    <div class="ml-4 d-flex flex-column position-absolute" style="left: 140px;">
+                        <span class="mb-1 font-weight-bold">Redmi Note 10</span>
+                        <div class="d-flex align-items-center mt-3">
+                            <button class="btn btn-sm" style="background-color: #03ac0e; width: 30px; color: #fff;">-</button>
+                            <input type="text" id="quantity" class="mx-2 text-center" value="1" style="width: 50px;" readonly />
+                            <button class="btn btn-sm" style="background-color: #03ac0e; width:30px; color: #fff;">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Ringkasan Belanja -->
+            <div class="card-summary">
+                <div class="summary-header">
+                  <span class="summary-title">Ringkasan Belanja</span>
+                  <hr class="summary-line" />
+                </div>
+              
+                <div class="summary-details">
+                  <div class="summary-item">
+                    <span class="summary-label">Subtotal</span>
+                    <span class="summary-value">Rp. 80.000</span>
+                  </div>
+                </div>
+              
+                <div class="coupon-offer">
+                  <span class="coupon-text">Makin hemat pakai promo!</span>
+                  <button class="btn btn-kupon">Gunakan Kupon</button>
+                </div>
+                <button class="btn btn-beli">Beli Sekarang</button>
+            </div>
+        </div>
+    </div>
+
+
+      <div class="row mx-0 mt-5" style="padding: 200px"; >
+        <div class="col-3">
+          <div class="d-flex flex-column">
+            <h4 class="font-weight-bold">Tokopedia</h4>
+            <h5>Tentang tokopedia</h5>
+            <h5>Tentang tokopedia</h5>
+            <h5>Tentang tokopedia</h5>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="d-flex flex-column">
+            <h4 class="font-weight-bold">Tokopedia</h4>
+            <h5>Tentang tokopedia</h5>
+            <h5>Tentang tokopedia</h5>
+            <h5>Tentang tokopedia</h5>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="d-flex flex-column">
+            <h4 class="font-weight-bold">Tokopedia</h4>
+            <h5>Tentang tokopedia</h5>
+            <h5>Tentang tokopedia</h5>
+            <h5>Tentang tokopedia</h5>
+          </div>
+        </div>
+
+        <div class="col-3">
+          <div class="d-flex flex-column align-items-center">
+            <img src="assets/img/21.png" width="400" alt="" />
+            <div class="d-flex mt-3">
+              <img width="150" class="mr-3" src="assets/img/22.png" alt="" />
+              <img width="150" src="assets/img/23.png" alt="" />
+            </div>
+            <span>Tokopedia</span>
+            <div class="d-flex align-items-center mt-3">
+              <span
+                class="text-white font-weight-bold p-2 mr-3 rounded"
+                style="background-color: #03ac0e"
+                >Indonesia</span
+              >
+              <span>English</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- Modal Konfirmasi -->
+<div id="deleteModal" class="modal">
+    <div class="modal-content">
+      <p>Apakah Anda yakin untuk menghapusnya?</p>
+      <div class="modal-buttons">
+        <button id="confirmDelete" class="btn btn-danger">Ya</button>
+        <button id="cancelDelete" class="btn btn-secondary">Tidak</button>
+      </div>
+    </div>
+  </div>
+  
+  
+    <script src="assets/js/script.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <!-- SweetAlert JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
